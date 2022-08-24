@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Buffalo Branding</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/svg-fonts.css" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        color: black;
+        -webkit-font-smoothing: antialiased;
+      }
+      .nav-link {
+        color: black;
+      }
+
+      .landing-page-section {
+        height: calc(100vh - 4rem);
+        background-image: url("assets/bg/bg_buffalo_dark_blue.png");
+        background-repeat: repeat;
+        background-size: 400px;
+        position: relative;
+      }
+
+      .bg-overlay {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.8;
+        z-index: 0;
+      }
+
+      .slogan {
+        color: white;
+        font-size: 80px;
+        font-family: "Rubik Dirt";
+        text-align: center;
+      }
+
+      .main-logo {
+        height: 30rem;
+      }
+
+      .navbar {
+        height: 4rem;
+        background-color: white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+      .navbar-collapse {
+        background-color: white;
+      }
+
+      @media (max-width: 992px) {
+        .nav-item {
+          display: flex;
+          justify-content: center;
+        }
+
+        .navbar {
+          padding-top: 0.2rem;
+        }
+
+        .card-group {
+          margin-top: -100px;
+        }
+
+        .open .card-middle {
+          transform: scale(1.05);
+        }
+
+        .slogan {
+          font-size: 80px;
+        }
+
+        .main-logo {
+          height: 25rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .slogan {
+          font-size: 60px;
+        }
+
+        .main-logo {
+          height: 20rem;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .main-logo {
+          height: 18rem;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .card-middle:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      * {
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+
+      .card-group {
+        max-width: 300px;
+        max-height: 380px;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .card {
+        color: #666;
+        padding: 0.625em 0.75em;
+        background-color: #fcfcfc;
+        border: 1px solid #ddd;
+        margin-top: -1px;
+        line-height: 1.5;
+        position: relative;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        min-height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 300px;
+        border: 1px solid rgb(165, 164, 164) !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+      }
+
+      .card-top {
+        -webkit-transform: translateY(130px);
+        transform: translateY(130px);
+      }
+
+      .open .card-top {
+        -webkit-transform: translateY(0) !important;
+        transform: translateY(0) !important;
+      }
+
+      .card-middle {
+        z-index: 99;
+        cursor: pointer;
+      }
+
+      .card-bottom {
+        -webkit-transform: translateY(-130px);
+        transform: translateY(-130px);
+      }
+
+      .open .card-bottom {
+        -webkit-transform: translateY(0) !important;
+        transform: translateY(0) !important;
+      }
+
+      .card-bottom p {
+        margin: 0;
+      }
+
+      .card-no-translate {
+        -webkit-transform: translateY(0) !important;
+        transform: translateY(0) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light" id="navbar">
+      <a class="navbar-brand d-flex align-items-center ms-3" href="#">
+        <object
+          type="image/svg+xml"
+          data="./assets/logo/BB_logo_dark.svg"
+          style="height: 3rem"
+        ></object>
+      </a>
+      <button
+        class="navbar-toggler me-3"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarToggler"
+        aria-controls="navbarToggler"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page content -->
+    <div class="container-fluid p-0">
+      <!-- Landing Page Section -->
+      <div
+        class="container-fluid d-flex justify-content-center landing-page-section"
+        id="landingContainer"
+      >
+        <div class="bg-overlay"></div>
+        <div class="row w-100" style="z-index: 99">
+          <div
+            class="col-lg-6 col-12 d-flex justify-content-center align-items-lg-center align-items-end"
+          >
+            <h1 class="slogan">
+              We don't follow,<br />
+              we lead the way!
+            </h1>
+          </div>
+          <div
+            class="col-lg-6 col-12 d-flex justify-content-center align-items-lg-center"
+          >
+            <object
+              type="image/svg+xml"
+              data="./assets/logo/BB_circle_logo_light.svg"
+              class="main-logo"
+            ></object>
+          </div>
+        </div>
+      </div>
+
+      <!-- The About Section -->
+      <div class="container" id="aboutContainer">
+        <div class="row">
+          <h2 class="">About</h2>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-4 col-12">
+            <section class="card-group">
+              <div class="card card-top">
+                <h2>Efficiency</h2>
+              </div>
+              <div class="card card-middle">
+                <img
+                  src="./assets/logo/BB_circle_logo_dark.png"
+                  height="50px"
+                />
+              </div>
+              <div class="card card-bottom">
+                <p>
+                  Our company strives on working to the max of our ability at a
+                  rapid speed to meet the deadlines we set for you.
+                </p>
+              </div>
+            </section>
+          </div>
+          <div class="col-lg-4 col-12">
+            <section class="card-group">
+              <div class="card card-top">
+                <h2>Efficiency</h2>
+              </div>
+              <div class="card card-middle">
+                <img
+                  src="./assets/logo/BB_circle_logo_dark.png"
+                  height="50px"
+                />
+              </div>
+              <div class="card card-bottom">
+                <p>
+                  Our company strives on working to the max of our ability at a
+                  rapid speed to meet the deadlines we set for you.
+                </p>
+              </div>
+            </section>
+          </div>
+          <div class="col-lg-4 col-12">
+            <section class="card-group">
+              <div class="card card-top">
+                <h2>Efficiency</h2>
+              </div>
+              <div class="card card-middle">
+                <img
+                  src="./assets/logo/BB_circle_logo_dark.png"
+                  height="50px"
+                />
+              </div>
+              <div class="card card-bottom">
+                <p>
+                  Our company strives on working to the max of our ability at a
+                  rapid speed to meet the deadlines we set for you.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-4 col-12">
+            <section class="card-group">
+              <div class="card card-top">
+                <h2>Efficiency</h2>
+              </div>
+              <div class="card card-middle">
+                <img
+                  src="./assets/logo/BB_circle_logo_dark.png"
+                  height="50px"
+                />
+              </div>
+              <div class="card card-bottom">
+                <p>
+                  Our company strives on working to the max of our ability at a
+                  rapid speed to meet the deadlines we set for you.
+                </p>
+              </div>
+            </section>
+          </div>
+          <div class="col-lg-4 col-12">
+            <section class="card-group">
+              <div class="card card-top">
+                <h2>Efficiency</h2>
+              </div>
+              <div class="card card-middle">
+                <img
+                  src="./assets/logo/BB_circle_logo_dark.png"
+                  height="50px"
+                />
+              </div>
+              <div class="card card-bottom">
+                <p>
+                  Our company strives on working to the max of our ability at a
+                  rapid speed to meet the deadlines we set for you.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Contact Section -->
+      <div
+        class="container d-flex justify-content-center"
+        id="contactContainer"
+      >
+        <h2 class="w3-wide w3-center">CONTACT</h2>
+      </div>
+
+      <!-- End Page Content -->
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge"
+    >
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <p class="w3-medium">
+        Powered by
+        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+          >w3.css</a
+        >
+      </p>
+    </footer>
+
+    <!-- JavaScript Code -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(() => {
+        const windowWidth = $(window).outerWidth();
+
+        if (windowWidth > 992) {
+          RunDesktopAboutSections();
+        } else {
+          RunMobileAboutSections();
+        }
+      });
+
+      function RunMobileAboutSections() {
+        const cards = document.querySelectorAll(".card-group");
+
+        window.addEventListener("scroll", cardGroups);
+
+        function cardGroups() {
+          const triggerBottom = (window.innerHeight / 6) * 3;
+
+          cards.forEach((card) => {
+            const cardTop = card.getBoundingClientRect().top;
+            const cardBottom = cardTop + 380;
+
+            if (cardTop < triggerBottom && cardBottom > triggerBottom) {
+              card.classList.add("open");
+              card.classList.add("open");
+            } else {
+              card.classList.remove("open");
+              card.classList.remove("open");
+            }
+          });
+        }
+      }
+
+      function RunDesktopAboutSections() {
+        var $cardgroups = $(".card-group");
+        var cardHeight = $(".card").outerHeight();
+
+        $cardgroups.each(function (i, cardGroup) {
+          const cardMiddle = $(cardGroup).find(".card-middle");
+
+          $(cardMiddle).hover(function () {
+            $(cardGroup).toggleClass("open");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
